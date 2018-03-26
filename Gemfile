@@ -39,6 +39,10 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem "awesome_print", '1.8.0'
+  gem "refile", require: "refile/rails", github: "refile/refile"
+  gem "refile-mini_magick"
+#  gem "carrierwave", '~> 1.0'
 end
 
 group :development do
