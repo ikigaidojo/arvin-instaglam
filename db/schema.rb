@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180323094043) do
+ActiveRecord::Schema.define(version: 20180326065437) do
 
   create_table "members", force: :cascade do |t|
     t.string "first_name"
@@ -29,7 +29,9 @@ ActiveRecord::Schema.define(version: 20180323094043) do
     t.integer "member_id"
     t.boolean "private", default: false
     t.string "post_image"
-    t.integer "post_image_id"
+    t.string "post_image_id"
+    t.string "post_image_content_size"
+    t.string "post_image_content_type"
   end
 
 end

@@ -1878,3 +1878,2677 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 11:35:18 +0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 420ms (Views: 388.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 11:35:20 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 24.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 11:35:22 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (64.6ms)
+  Rendered posts/new.html.erb within layouts/application (73.4ms)
+Completed 200 OK in 162ms (Views: 122.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-03-26 11:35:32 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uaaTQA3xFfu7NL5uCYgOrXzZSMzUTQ6PCI1KZYSq0fpw0NJZWF3VRxaE8svBIZo8OzF4EJHyyCGHSsUvI+lM1A==", "post"=>{"post_image"=>#<ActionDispatch::Http::UploadedFile:0x007f951e551058 @tempfile=#<Tempfile:/var/folders/vq/2xmr2yjn06jb6g57c61v5vl00000gn/T/RackMultipart20180326-60184-s4d7di.png>, @original_filename="Screen Shot 2018-03-22 at 7.32.09 AM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"Screen Shot 2018-03-22 at 7.32.09 AM.png\"\r\nContent-Type: image/png\r\n">, "captions"=>"one two three"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "post_image_id") VALUES (?, ?, ?, ?)[0m  [["captions", "one two three"], ["created_at", "2018-03-26 03:35:32.795111"], ["updated_at", "2018-03-26 03:35:32.795111"], ["post_image_id", 7273]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/11
+Completed 302 Found in 20ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2018-03-26 11:35:32 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 39ms (Views: 27.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 11:35:35 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 57ms (Views: 45.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 11:35:35 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 11:35:35 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 5.2ms
+
+Started GET "/posts/11" for 127.0.0.1 at 2018-03-26 11:35:37 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 11:35:37 +0800
+Refile::App: Could not find attachment by id: 7273
+  Rendering posts/show.html.erb within layouts/application
+Refile::App: [2018-03-26 11:35:37 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 14.1ms
+
+  Rendered posts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 63ms (Views: 57.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 11:35:39 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 11:35:39 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.2ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 11:35:40 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 28.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 11:35:40 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 11:35:40 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.5ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 11:37:50 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 11:37:50 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 11:37:50 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.5ms
+
+  [1m[36mMember Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "members" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  [1m[36mPost Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:02:04 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    13:   <tbody>
+    14:     <% @posts.each do |post| %>
+    15:       <tr>
+    16:         <td><%= image_tag attachment_url(@post, :post_image, :fill, 300, 300, format: "jpg") %></td>
+    17:         <td><%= post.captions %></td>
+    18:         <td><%= link_to 'Show', post %></td>
+    19:         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+  
+app/views/posts/index.html.erb:16:in `block in _app_views_posts_index_html_erb___971705127089429180_70139218606020'
+app/views/posts/index.html.erb:14:in `_app_views_posts_index_html_erb___971705127089429180_70139218606020'
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:02:18 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_image' for #<Post::ActiveRecord_Relation:0x007f9524128ea8>):
+    13:   <tbody>
+    14:     <% @posts.each do |post| %>
+    15:       <tr>
+    16:         <td><%= image_tag attachment_url(@posts, :post_image, :fill, 300, 300, format: "jpg") %></td>
+    17:         <td><%= post.captions %></td>
+    18:         <td><%= link_to 'Show', post %></td>
+    19:         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+  
+app/views/posts/index.html.erb:16:in `block in _app_views_posts_index_html_erb___971705127089429180_70139265998320'
+app/views/posts/index.html.erb:14:in `_app_views_posts_index_html_erb___971705127089429180_70139265998320'
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:02:30 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (403.8ms)
+Completed 500 Internal Server Error in 416ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `posts' for #<#<Class:0x007f951cb7f558>:0x007f951ddaf5c0>
+Did you mean?  post
+               @posts):
+    13:   <tbody>
+    14:     <% @posts.each do |post| %>
+    15:       <tr>
+    16:         <td><%= image_tag attachment_url(posts, :post_image, :fill, 300, 300, format: "jpg") %></td>
+    17:         <td><%= post.captions %></td>
+    18:         <td><%= link_to 'Show', post %></td>
+    19:         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+  
+app/views/posts/index.html.erb:16:in `block in _app_views_posts_index_html_erb___971705127089429180_70139232747300'
+app/views/posts/index.html.erb:14:in `_app_views_posts_index_html_erb___971705127089429180_70139232747300'
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:02:36 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 68ms (Views: 64.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:02:36 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:02:36 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.3ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:05:16 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 67ms (Views: 61.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:05:16 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:05:16 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.4ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:05:29 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 30ms (Views: 25.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/b58cdbdc292ea26dbd13ccf5298284af98f6c03c/store/fill/300/300/7273/post_image.png" for 127.0.0.1 at 2018-03-26 12:05:29 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:05:29 +0800] GET "/b58cdbdc292ea26dbd13ccf5298284af98f6c03c/store/fill/300/300/7273/post_image.png" 404 1.3ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:05:58 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:05:58 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:05:58 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.2ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:08:15 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 49ms (Views: 32.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:08:15 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:08:15 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.1ms
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 12:09:15 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.9ms)
+  Rendered posts/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 80ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:09:15 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:09:15 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.3ms
+
+Started POST "/posts" for 127.0.0.1 at 2018-03-26 12:09:22 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0KrIJu1DiM9sOJT3pNl3Ow3rYDo6R4HjgKpyrWOFkAUZ3Ik/uO9Ic8GI2FJscOOqSgNQ5n/4R00Pbf3nxMYNKw==", "post"=>{"post_image"=>#<ActionDispatch::Http::UploadedFile:0x007f951e253e78 @tempfile=#<Tempfile:/var/folders/vq/2xmr2yjn06jb6g57c61v5vl00000gn/T/RackMultipart20180326-60184-k6d9e1.jpg>, @original_filename="red_panda.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"red_panda.jpg\"\r\nContent-Type: image/jpeg\r\n">, "captions"=>"red panda <3"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "post_image_id") VALUES (?, ?, ?, ?)[0m  [["captions", "red panda <3"], ["created_at", "2018-03-26 04:09:22.754732"], ["updated_at", "2018-03-26 04:09:22.754732"], ["post_image_id", 21]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/12
+Completed 302 Found in 18ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2018-03-26 12:09:22 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 40ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:09:24 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 65ms (Views: 56.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/attachments/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:09:24 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:09:24 +0800] GET "/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" 404 1.5ms
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:09:24 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:09:24 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.2ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:09:25 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:09:25 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:09:25 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.3ms
+
+Started GET "/attachments/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:09:25 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:09:25 +0800] GET "/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" 404 1.4ms
+
+Started GET "/posts/12" for 127.0.0.1 at 2018-03-26 12:09:28 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 37.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:09:28 +0800
+Started GET "/attachments/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:09:28 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:09:28 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 3.7ms
+
+Refile::App: [2018-03-26 12:09:28 +0800] GET "/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" 404 2.0ms
+
+Started GET "/posts/12" for 127.0.0.1 at 2018-03-26 12:09:29 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 21.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:09:31 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 50ms (Views: 41.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:09:31 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:09:31 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.4ms
+
+Started GET "/attachments/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:09:31 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:09:31 +0800] GET "/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" 404 1.4ms
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2018-03-26 12:09:32 +0800
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (4.2ms)
+  Rendered posts/edit.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 57ms (Views: 46.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:09:32 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:09:32 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.3ms
+
+Started GET "/attachments/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:09:32 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:09:32 +0800] GET "/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" 404 1.2ms
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:09:35 +0800
+Refile::App: Could not find attachment by id: 7273
+Started GET "/attachments/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:09:35 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:09:35 +0800] GET "/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" 404 2.6ms
+
+Refile::App: [2018-03-26 12:09:35 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 7.1ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:09:37 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:09:37 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:09:37 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.2ms
+
+Started GET "/attachments/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:09:37 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:09:37 +0800] GET "/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" 404 1.6ms
+
+  [1m[36mPost Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:11:43 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 31ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" for 127.0.0.1 at 2018-03-26 12:11:43 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:11:43 +0800] GET "/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" 404 3.4ms
+
+Started GET "/attachments/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" for 127.0.0.1 at 2018-03-26 12:11:43 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:11:43 +0800] GET "/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" 404 1.5ms
+
+Started GET "/posts/12" for 127.0.0.1 at 2018-03-26 12:11:46 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 44ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" for 127.0.0.1 at 2018-03-26 12:11:46 +0800
+Refile::App: Could not find attachment by id: 7273
+Started GET "/attachments/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" for 127.0.0.1 at 2018-03-26 12:11:46 +0800
+Refile::App: [2018-03-26 12:11:46 +0800] GET "/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" 404 2.3ms
+
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:11:46 +0800] GET "/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" 404 1.5ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:11:49 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 48ms (Views: 39.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/attachments/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" for 127.0.0.1 at 2018-03-26 12:11:49 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:11:49 +0800] GET "/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" 404 1.4ms
+
+Started GET "/attachments/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" for 127.0.0.1 at 2018-03-26 12:11:49 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:11:49 +0800] GET "/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" 404 1.4ms
+
+Started GET "/posts/12/edit" for 127.0.0.1 at 2018-03-26 12:11:50 +0800
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (4.1ms)
+  Rendered posts/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 53ms (Views: 46.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" for 127.0.0.1 at 2018-03-26 12:11:50 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:11:50 +0800] GET "/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" 404 1.3ms
+
+Started GET "/attachments/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" for 127.0.0.1 at 2018-03-26 12:11:50 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:11:50 +0800] GET "/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" 404 1.4ms
+
+Started GET "/attachments/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" for 127.0.0.1 at 2018-03-26 12:11:51 +0800
+Started GET "/attachments/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" for 127.0.0.1 at 2018-03-26 12:11:51 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:11:51 +0800] GET "/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" 404 2.2ms
+
+Refile::App: [2018-03-26 12:11:51 +0800] GET "/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" 404 4.3ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:11:52 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" for 127.0.0.1 at 2018-03-26 12:11:52 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:11:52 +0800] GET "/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" 404 1.4ms
+
+Started GET "/attachments/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" for 127.0.0.1 at 2018-03-26 12:11:52 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:11:52 +0800] GET "/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" 404 1.4ms
+
+  [1m[36mMember Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "members" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  [1m[36mPost Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:14:15 +0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 418ms (Views: 387.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/attachments/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" for 127.0.0.1 at 2018-03-26 12:14:16 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:14:16 +0800] GET "/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" 404 9.2ms
+
+Started GET "/attachments/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" for 127.0.0.1 at 2018-03-26 12:14:16 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:14:16 +0800] GET "/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" 404 1.3ms
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 12:15:00 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (62.8ms)
+  Rendered posts/new.html.erb within layouts/application (72.1ms)
+Completed 200 OK in 115ms (Views: 106.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/attachments/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" for 127.0.0.1 at 2018-03-26 12:15:00 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:15:00 +0800] GET "/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" 404 1.4ms
+
+Started GET "/attachments/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" for 127.0.0.1 at 2018-03-26 12:15:00 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:15:00 +0800] GET "/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" 404 1.0ms
+
+Started POST "/posts" for 127.0.0.1 at 2018-03-26 12:15:14 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TPDvL1FCKJlwdZwb0Ll/IfPMFadxYd9LVWfxyS6hdN2Fhq42BO7oJd3F0L4YEOuwtCQlezTeGeXaoH6DieLp8w==", "post"=>{"post_image"=>#<ActionDispatch::Http::UploadedFile:0x007f9dbdbfbf28 @tempfile=#<Tempfile:/var/folders/vq/2xmr2yjn06jb6g57c61v5vl00000gn/T/RackMultipart20180326-60329-1hd5zdm.JPG>, @original_filename="IMG_0353.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"IMG_0353.JPG\"\r\nContent-Type: image/jpeg\r\n">, "captions"=>"aaaa"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "post_image_id") VALUES (?, ?, ?, ?)[0m  [["captions", "aaaa"], ["created_at", "2018-03-26 04:15:14.695785"], ["updated_at", "2018-03-26 04:15:14.695785"], ["post_image_id", 0]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/13
+Completed 302 Found in 26ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/posts/13" for 127.0.0.1 at 2018-03-26 12:15:14 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 40ms (Views: 29.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:15:19 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 53ms (Views: 46.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/3634059ee155cbddbab5bff7c5b5beb22dee044f/store/fill/300/300/0/post_image" for 127.0.0.1 at 2018-03-26 12:15:19 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 12:15:19 +0800] GET "/3634059ee155cbddbab5bff7c5b5beb22dee044f/store/fill/300/300/0/post_image" 404 1.3ms
+
+Started GET "/attachments/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" for 127.0.0.1 at 2018-03-26 12:15:19 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:15:19 +0800] GET "/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" 404 1.6ms
+
+Started GET "/attachments/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" for 127.0.0.1 at 2018-03-26 12:15:19 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:15:19 +0800] GET "/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" 404 1.4ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:15:21 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 35ms (Views: 30.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" for 127.0.0.1 at 2018-03-26 12:15:21 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:15:21 +0800] GET "/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" 404 2.2ms
+
+Started GET "/attachments/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" for 127.0.0.1 at 2018-03-26 12:15:21 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:15:21 +0800] GET "/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" 404 1.9ms
+
+Started GET "/attachments/3634059ee155cbddbab5bff7c5b5beb22dee044f/store/fill/300/300/0/post_image" for 127.0.0.1 at 2018-03-26 12:15:21 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 12:15:21 +0800] GET "/3634059ee155cbddbab5bff7c5b5beb22dee044f/store/fill/300/300/0/post_image" 404 5.9ms
+
+Started GET "/posts/13" for 127.0.0.1 at 2018-03-26 12:15:24 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 62ms (Views: 57.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" for 127.0.0.1 at 2018-03-26 12:15:24 +0800
+Refile::App: Could not find attachment by id: 7273
+Started GET "/attachments/3634059ee155cbddbab5bff7c5b5beb22dee044f/store/fill/300/300/0/post_image" for 127.0.0.1 at 2018-03-26 12:15:24 +0800
+Refile::App: [2018-03-26 12:15:24 +0800] GET "/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" 404 3.9ms
+
+Started GET "/attachments/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" for 127.0.0.1 at 2018-03-26 12:15:24 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:15:24 +0800] GET "/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" 404 5.3ms
+
+Refile::App: [2018-03-26 12:15:24 +0800] GET "/3634059ee155cbddbab5bff7c5b5beb22dee044f/store/fill/300/300/0/post_image" 404 7.2ms
+
+Started GET "/attachments/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" for 127.0.0.1 at 2018-03-26 12:15:26 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:15:26 +0800] GET "/e56e609fe463d3963ba080aa209a8fddc5ce774f/store/fill/300/300/7273/post_image" 404 1.6ms
+
+Started GET "/attachments/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" for 127.0.0.1 at 2018-03-26 12:15:26 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:15:26 +0800] GET "/58efacd2af6a574a659e807517e857e139626ce5/store/fill/300/300/21/post_image" 404 2.1ms
+
+Started GET "/attachments/3634059ee155cbddbab5bff7c5b5beb22dee044f/store/fill/300/300/0/post_image" for 127.0.0.1 at 2018-03-26 12:15:26 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 12:15:26 +0800] GET "/3634059ee155cbddbab5bff7c5b5beb22dee044f/store/fill/300/300/0/post_image" 404 8.0ms
+
+  [1m[36mPost Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:24:16 +0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 492ms (Views: 449.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/attachments/2bd31e0b6621ba411f8e15a2ee4516a2c39be3be/store/fill/300/300/7273/post_image..jpg" for 127.0.0.1 at 2018-03-26 12:24:18 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:24:18 +0800] GET "/2bd31e0b6621ba411f8e15a2ee4516a2c39be3be/store/fill/300/300/7273/post_image..jpg" 404 4.1ms
+
+Started GET "/attachments/ab8ce40ac7bc075985d6c32badfba73f48abaf36/store/fill/300/300/21/post_image..jpg" for 127.0.0.1 at 2018-03-26 12:24:18 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:24:18 +0800] GET "/ab8ce40ac7bc075985d6c32badfba73f48abaf36/store/fill/300/300/21/post_image..jpg" 404 1.3ms
+
+Started GET "/attachments/25709f175c1d96884429a1d2a9852775b0b84864/store/fill/300/300/0/post_image..jpg" for 127.0.0.1 at 2018-03-26 12:24:18 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 12:24:18 +0800] GET "/25709f175c1d96884429a1d2a9852775b0b84864/store/fill/300/300/0/post_image..jpg" 404 2.6ms
+
+Started GET "/posts/11" for 127.0.0.1 at 2018-03-26 12:24:22 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 51ms (Views: 35.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/2bd31e0b6621ba411f8e15a2ee4516a2c39be3be/store/fill/300/300/7273/post_image..jpg" for 127.0.0.1 at 2018-03-26 12:24:22 +0800
+Refile::App: Could not find attachment by id: 7273
+Started GET "/attachments/ab8ce40ac7bc075985d6c32badfba73f48abaf36/store/fill/300/300/21/post_image..jpg" for 127.0.0.1 at 2018-03-26 12:24:22 +0800
+Started GET "/attachments/25709f175c1d96884429a1d2a9852775b0b84864/store/fill/300/300/0/post_image..jpg" for 127.0.0.1 at 2018-03-26 12:24:22 +0800
+Refile::App: [2018-03-26 12:24:22 +0800] GET "/2bd31e0b6621ba411f8e15a2ee4516a2c39be3be/store/fill/300/300/7273/post_image..jpg" 404 3.0ms
+
+Refile::App: Could not find attachment by id: 21
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 12:24:22 +0800] GET "/ab8ce40ac7bc075985d6c32badfba73f48abaf36/store/fill/300/300/21/post_image..jpg" 404 3.9ms
+
+Refile::App: [2018-03-26 12:24:22 +0800] GET "/25709f175c1d96884429a1d2a9852775b0b84864/store/fill/300/300/0/post_image..jpg" 404 2.6ms
+
+Started GET "/attachments/2bd31e0b6621ba411f8e15a2ee4516a2c39be3be/store/fill/300/300/7273/post_image..jpg" for 127.0.0.1 at 2018-03-26 12:24:25 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:24:25 +0800] GET "/2bd31e0b6621ba411f8e15a2ee4516a2c39be3be/store/fill/300/300/7273/post_image..jpg" 404 1.4ms
+
+Started GET "/attachments/ab8ce40ac7bc075985d6c32badfba73f48abaf36/store/fill/300/300/21/post_image..jpg" for 127.0.0.1 at 2018-03-26 12:24:25 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:24:25 +0800] GET "/ab8ce40ac7bc075985d6c32badfba73f48abaf36/store/fill/300/300/21/post_image..jpg" 404 1.3ms
+
+Started GET "/attachments/25709f175c1d96884429a1d2a9852775b0b84864/store/fill/300/300/0/post_image..jpg" for 127.0.0.1 at 2018-03-26 12:24:25 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 12:24:25 +0800] GET "/25709f175c1d96884429a1d2a9852775b0b84864/store/fill/300/300/0/post_image..jpg" 404 1.4ms
+
+Started GET "/attachments/2bd31e0b6621ba411f8e15a2ee4516a2c39be3be/store/fill/300/300/7273/post_image..jpg" for 127.0.0.1 at 2018-03-26 12:25:05 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:25:05 +0800] GET "/2bd31e0b6621ba411f8e15a2ee4516a2c39be3be/store/fill/300/300/7273/post_image..jpg" 404 1.1ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:25:24 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 71ms (Views: 67.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:25:25 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:25:25 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.3ms
+
+Started GET "/attachments/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:25:25 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:25:25 +0800] GET "/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" 404 1.4ms
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:25:25 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 12:25:25 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 1.2ms
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:25:33 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:25:33 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.3ms
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:25:36 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:25:36 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.8ms
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:25:38 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:25:38 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 0.8ms
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:25:39 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:25:39 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.1ms
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:25:53 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:25:53 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 0.9ms
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:26:49 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:26:49 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 1.0ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:26:54 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 98ms (Views: 83.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/attachments/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:26:54 +0800
+Refile::App: Could not find attachment by id: 7273
+Refile::App: [2018-03-26 12:26:54 +0800] GET "/cbab26fc93ae2358a0e47f13de63eeaef5ba172c/store/fill/300/300/7273/post_image.jpg" 404 20.5ms
+
+Started GET "/attachments/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:26:54 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:26:54 +0800] GET "/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" 404 1.4ms
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:26:54 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 12:26:54 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 1.2ms
+
+Started DELETE "/posts/11" for 127.0.0.1 at 2018-03-26 12:26:58 +0800
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pK4R1IjwVEnNSwGuWv9/4YLksRdMGroSI93wWcK6L1Vw5Z5IyNsiJymkbM4EfkNz6W+WZlHbG2pc1Z/4KZjEtQ==", "id"=>"11"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 11]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 13ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:26:58 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 51ms (Views: 45.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/attachments/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:26:58 +0800
+Refile::App: Could not find attachment by id: 21
+Refile::App: [2018-03-26 12:26:58 +0800] GET "/7eac1a85c4578e42c77c0271f747e6240037cf59/store/fill/300/300/21/post_image.jpg" 404 1.2ms
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:26:58 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 12:26:58 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 1.5ms
+
+Started DELETE "/posts/12" for 127.0.0.1 at 2018-03-26 12:27:00 +0800
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sciyUgPYwtoFtx6rSvN+gkd2PQ9ZJpBaInG+GmmsMJVlgz3OQ/O0tOFYc8sUckIQLP0afkTnMSJdedG7go7bdQ==", "id"=>"12"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 12]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 10ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:27:00 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 52ms (Views: 46.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:27:01 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 12:27:01 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 1.3ms
+
+Started DELETE "/posts/13" for 127.0.0.1 at 2018-03-26 12:27:03 +0800
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RzTniAq8256ZMqx0KYqI28+N+/a82cQ1ArZ27B3uKDSTf2gUSpet8H3dwRR3C7RJpAbch6EYZU19vhlN9szD1A==", "id"=>"13"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 13]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 9ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:27:03 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 42ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:27:05 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mPost Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 12:27:26 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (9.5ms)
+  Rendered posts/new.html.erb within layouts/application (17.8ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <%= form_with(model: post, local: true) do |form| %>
+    2:   <% if post.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+    5: 
+  
+app/views/posts/_form.html.erb:2:in `block in _app_views_posts__form_html_erb___334485410972390456_70094687124420'
+app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___334485410972390456_70094687124420'
+app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb___2510257139845074394_70094729618820'
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 12:28:47 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (62.9ms)
+  Rendered posts/new.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 112ms (Views: 93.2ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mPost Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/posts" for 127.0.0.1 at 2018-03-26 12:29:08 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mCnnujbtuCFrzQy45ATSmpPB45RhNBweN1gzCF/yUtRMYmgmdsbOT48iYdi6he4I+ErE5Xz1vWZIUFyptNC5NA==", "post"=>{"post_image"=>#<ActionDispatch::Http::UploadedFile:0x007f8061bea918 @tempfile=#<Tempfile:/var/folders/vq/2xmr2yjn06jb6g57c61v5vl00000gn/T/RackMultipart20180326-60382-1hbae90.jpg>, @original_filename="red_panda.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"red_panda.jpg\"\r\nContent-Type: image/jpeg\r\n">, "captions"=>"red panda <3"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "post_image_id") VALUES (?, ?, ?, ?)[0m  [["captions", "red panda <3"], ["created_at", "2018-03-26 04:29:08.351869"], ["updated_at", "2018-03-26 04:29:08.351869"], ["post_image_id", 84]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/14
+Completed 302 Found in 15ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/14" for 127.0.0.1 at 2018-03-26 12:29:08 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:29:09 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:   </thead>
+    12: 
+    13:   <tbody>
+    14:     <% @posts.each do |post| %>
+    15:       <tr>
+    16:         <td><%= image_tag attachment_url(post, :post_image, :fill, 300, 300, format: "jpg") %></td>
+    17:         <td><%= post.captions %></td>
+  
+app/views/posts/index.html.erb:14:in `_app_views_posts_index_html_erb___4480989267214778467_70094735148400'
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:29:12 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:   </thead>
+    12: 
+    13:   <tbody>
+    14:     <% @posts.each do |post| %>
+    15:       <tr>
+    16:         <td><%= image_tag attachment_url(post, :post_image, :fill, 300, 300, format: "jpg") %></td>
+    17:         <td><%= post.captions %></td>
+  
+app/views/posts/index.html.erb:14:in `_app_views_posts_index_html_erb___4480989267214778467_70094702985360'
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:29:13 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:   </thead>
+    12: 
+    13:   <tbody>
+    14:     <% @posts.each do |post| %>
+    15:       <tr>
+    16:         <td><%= image_tag attachment_url(post, :post_image, :fill, 300, 300, format: "jpg") %></td>
+    17:         <td><%= post.captions %></td>
+  
+app/views/posts/index.html.erb:14:in `_app_views_posts_index_html_erb___4480989267214778467_70094684861760'
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:29:34 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 67ms (Views: 62.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:29:34 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:29:34 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 1.4ms
+
+Started GET "/posts/14" for 127.0.0.1 at 2018-03-26 12:29:38 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 57ms (Views: 47.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:29:38 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:29:38 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 1.5ms
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:29:39 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:29:39 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 2.9ms
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:29:41 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:29:41 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 1.9ms
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:29:42 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:29:42 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 4.8ms
+
+Started GET "/posts/14/edit" for 127.0.0.1 at 2018-03-26 12:29:44 +0800
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (7.2ms)
+  Rendered posts/edit.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 98ms (Views: 83.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:29:44 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:29:44 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 7.6ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:29:46 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:29:46 +0800
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Refile::App: Could not find attachment by id: 84
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+Refile::App: [2018-03-26 12:29:46 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 2.0ms
+
+Completed 200 OK in 61ms (Views: 52.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:29:46 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:29:46 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 1.5ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:29:47 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 38ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:29:47 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:29:47 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 2.1ms
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:30:00 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:30:00 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 1.3ms
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:32:14 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:32:14 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 0.9ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:32:17 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 44ms (Views: 35.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:32:17 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:32:17 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 1.4ms
+
+Started GET "/posts/14" for 127.0.0.1 at 2018-03-26 12:32:23 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 51ms (Views: 41.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:32:24 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:32:24 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 1.4ms
+
+Started GET "/posts/14" for 127.0.0.1 at 2018-03-26 12:32:27 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/14" for 127.0.0.1 at 2018-03-26 12:42:51 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 75ms (Views: 69.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:42:53 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 63ms (Views: 55.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:42:53 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:42:53 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 1.3ms
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 12:42:54 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.8ms)
+  Rendered posts/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 59ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:42:55 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:42:55 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 1.9ms
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:42:56 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:42:56 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 1.5ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:42:58 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:42:58 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:42:58 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 1.4ms
+
+Started GET "/posts/14" for 127.0.0.1 at 2018-03-26 12:43:07 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 54ms (Views: 45.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 12:43:07 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 12:43:07 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 1.6ms
+
+Started GET "/posts/14" for 127.0.0.1 at 2018-03-26 12:45:02 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 74ms (Views: 67.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:45:04 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (19.1ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `profile_image' for #<Post::ActiveRecord_Relation:0x007f8060be7188>):
+    13:   <tbody>
+    14:     <% @post.each do |post| %>
+    15:       <tr>
+    16:         <%= image_tag attachment_url(@post, :profile_image, :fill, 300, 300, format: "jpg") %>
+    17:         <td><%= post.captions %></td>
+    18:         <td><%= link_to 'Show', post %></td>
+    19:         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+  
+app/views/posts/index.html.erb:16:in `block in _app_views_posts_index_html_erb___4480989267214778467_70094677811660'
+app/views/posts/index.html.erb:14:in `_app_views_posts_index_html_erb___4480989267214778467_70094677811660'
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 12:45:24 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_image' for #<Post::ActiveRecord_Relation:0x007f80624184a0>):
+    13:   <tbody>
+    14:     <% @post.each do |post| %>
+    15:       <tr>
+    16:         <%= image_tag attachment_url(@post, :post_image, :fill, 300, 300, format: "jpg") %>
+    17:         <td><%= post.captions %></td>
+    18:         <td><%= link_to 'Show', post %></td>
+    19:         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+  
+app/views/posts/index.html.erb:16:in `block in _app_views_posts_index_html_erb___4480989267214778467_70094686697720'
+app/views/posts/index.html.erb:14:in `_app_views_posts_index_html_erb___4480989267214778467_70094686697720'
+  [1m[36mPost Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:40:10 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 172ms (Views: 152.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/attachments/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:40:10 +0800
+Refile::App: Could not find attachment by id: 84
+Refile::App: [2018-03-26 13:40:10 +0800] GET "/daa59ffd8465b68fad1aa08876c99e963c8de3a4/store/fill/300/300/84/post_image.jpg" 404 22.9ms
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20180321030335)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "captions" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180321030335"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMembers (20180321032824)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "username" varchar, "email" varchar, "mobile_phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180321032824"]]
+  [1m[35m (29.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddMemberIdToPost (20180323061745)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.4ms)[0m  [1m[35mALTER TABLE "posts" ADD "member_id" integer[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180323061745"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPrivateToPosts (20180323062248)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "posts" ADD "private" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180323062248"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPostImageToPosts (20180323094043)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_id" integer[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180323094043"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-03-26 05:41:22.393239"], ["updated_at", "2018-03-26 05:41:22.393239"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:42:10 +0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 450ms (Views: 406.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 13:42:42 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (60.4ms)
+  Rendered posts/new.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 162ms (Views: 107.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-03-26 13:42:50 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nkUrN06BfQ7YxiWvNZDbKM1R3HJsQcYxmkGmMugNk2NXM2ouGy29snV2aQr9OU+5irnsrin+AJ8Vhil4T04OTQ==", "post"=>{"post_image"=>#<ActionDispatch::Http::UploadedFile:0x007fa4a8c3e6b0 @tempfile=#<Tempfile:/var/folders/vq/2xmr2yjn06jb6g57c61v5vl00000gn/T/RackMultipart20180326-60684-1dni3jj.jpg>, @original_filename="red_panda.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"red_panda.jpg\"\r\nContent-Type: image/jpeg\r\n">, "captions"=>"pandaaa"}, "commit"=>"Create Post"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "post_image_id") VALUES (?, ?, ?, ?)[0m  [["captions", "pandaaa"], ["created_at", "2018-03-26 05:42:50.064549"], ["updated_at", "2018-03-26 05:42:50.064549"], ["post_image_id", 0]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 15ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2018-03-26 13:42:50 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 65ms (Views: 47.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:42:52 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 81ms (Views: 68.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:42:52 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:42:52 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 28.9ms
+
+Started GET "/posts/1" for 127.0.0.1 at 2018-03-26 13:42:55 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (4.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:42:55 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:42:55 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 1.3ms
+
+Completed 200 OK in 106ms (Views: 77.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:42:57 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:42:57 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 2.2ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:45:15 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (40.3ms)
+Completed 200 OK in 158ms (Views: 139.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:45:15 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:45:15 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 1.4ms
+
+Started GET "/posts/1" for 127.0.0.1 at 2018-03-26 13:45:17 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 59ms (Views: 45.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:45:18 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:45:18 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 1.4ms
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:45:19 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:45:19 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 1.0ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:48:24 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 106ms (Views: 93.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:48:24 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:48:24 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 11.5ms
+
+Started DELETE "/posts/1" for 127.0.0.1 at 2018-03-26 13:48:28 +0800
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"U4iiAR6RQQ25C12vGSPZHlCFqnIJ6uLR2Fq82KS/M2KHwy2dXro3Y13kMM9HouWMOw6NAxQrQ6mnUtN5T53Ygg==", "id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 16ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:48:28 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 145ms (Views: 137.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 13:48:29 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (5.2ms)
+  Rendered posts/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 96ms (Views: 85.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-03-26 13:48:36 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L3fAh3zWZf4RxR3cBuOa77I5MlMuNdnlZhZT/IcYD+PmAYGeKXqlQrx1UXnOSg5+9dECj2uKH0vp0dy2IFuSzQ==", "post"=>{"post_image"=>#<ActionDispatch::Http::UploadedFile:0x007fa4a4c4c6d8 @tempfile=#<Tempfile:/var/folders/vq/2xmr2yjn06jb6g57c61v5vl00000gn/T/RackMultipart20180326-60684-n3nh6o.jpg>, @original_filename="red_panda.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"red_panda.jpg\"\r\nContent-Type: image/jpeg\r\n">, "captions"=>"pandaaa"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "post_image_id") VALUES (?, ?, ?, ?)[0m  [["captions", "pandaaa"], ["created_at", "2018-03-26 05:48:36.462466"], ["updated_at", "2018-03-26 05:48:36.462466"], ["post_image_id", 40]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 14ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2018-03-26 13:48:36 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 72ms (Views: 64.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:48:38 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 89ms (Views: 80.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/9f4fac5ca78506ae457c6f5678e9de7205ffb628/store/fill/300/300/40/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:48:38 +0800
+Refile::App: Could not find attachment by id: 40
+Refile::App: [2018-03-26 13:48:38 +0800] GET "/9f4fac5ca78506ae457c6f5678e9de7205ffb628/store/fill/300/300/40/post_image.jpg" 404 10.4ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:48:40 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 330ms (Views: 294.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/9f4fac5ca78506ae457c6f5678e9de7205ffb628/store/fill/300/300/40/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:48:40 +0800
+Refile::App: Could not find attachment by id: 40
+Refile::App: [2018-03-26 13:48:40 +0800] GET "/9f4fac5ca78506ae457c6f5678e9de7205ffb628/store/fill/300/300/40/post_image.jpg" 404 1.8ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:50:13 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 211ms (Views: 188.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/attachments/9f4fac5ca78506ae457c6f5678e9de7205ffb628/store/fill/300/300/40/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:50:13 +0800
+Refile::App: Could not find attachment by id: 40
+Refile::App: [2018-03-26 13:50:13 +0800] GET "/9f4fac5ca78506ae457c6f5678e9de7205ffb628/store/fill/300/300/40/post_image.jpg" 404 1.3ms
+
+Started DELETE "/posts/2" for 127.0.0.1 at 2018-03-26 13:50:16 +0800
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0hs8nLl16LLMg3Di1ZXAzuSGae8NjKQ9fV3B+th/BC4GULMA+V6e3ChsHYKLFPxcjw1OnhBNBUUCVa5bM13vzg==", "id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (24.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 62ms (ActiveRecord: 25.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:50:16 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 93ms (Views: 87.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 13:50:19 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (9.0ms)
+  Rendered posts/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 97ms (Views: 87.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-03-26 13:50:28 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bEMu9eXIti2BxjfxZXCUeo0l/VGHiOZdeQ6MopktFX+lNW/ssGR2kSx2e1St2QDrys3NjcI3IPP2yQPoPm6IUQ==", "post"=>{"post_image"=>#<ActionDispatch::Http::UploadedFile:0x007fa4aa1dad20 @tempfile=#<Tempfile:/var/folders/vq/2xmr2yjn06jb6g57c61v5vl00000gn/T/RackMultipart20180326-60684-1playfk.jpg>, @original_filename="red_panda.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"red_panda.jpg\"\r\nContent-Type: image/jpeg\r\n">, "captions"=>"panduhhh"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "post_image_id") VALUES (?, ?, ?, ?)[0m  [["captions", "panduhhh"], ["created_at", "2018-03-26 05:50:28.411049"], ["updated_at", "2018-03-26 05:50:28.411049"], ["post_image_id", 0]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 21ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2018-03-26 13:50:28 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 45ms (Views: 35.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:50:30 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 62ms (Views: 53.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:50:30 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:50:30 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 6.7ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:50:31 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 68ms (Views: 61.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:50:31 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:50:31 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 4.5ms
+
+  [1m[36mPost Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:51:12 +0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 475ms (Views: 438.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:51:13 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:51:13 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 21.3ms
+
+Started GET "/posts/3" for 127.0.0.1 at 2018-03-26 13:51:18 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 61ms (Views: 41.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:51:18 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:51:18 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 5.6ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:51:19 +0800
+Processing by PostsController#index as HTML
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:51:19 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:51:19 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 1.2ms
+
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 168ms (Views: 145.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:51:19 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:51:19 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 9.3ms
+
+Started DELETE "/posts/3" for 127.0.0.1 at 2018-03-26 13:51:22 +0800
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TFC+V/DpEte03My4uHDEAZCaNqthgI5F1XB3OFqgC2CYGzHLsMJkuVAzodjm8fiT+xER2nxBLz2qeBiZsYLggA==", "id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 3]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 10ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:51:22 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 134ms (Views: 123.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 13:51:23 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (63.7ms)
+  Rendered posts/new.html.erb within layouts/application (75.9ms)
+Completed 200 OK in 123ms (Views: 115.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-03-26 13:51:30 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p09xZpyD2Ui6Pv8DNrTh2PH3q0Bu8vd/zqYNudZX6SluOTB/yS8Z9BeOs6b+HXVJth+bnCtNMdFBYYLzcRR0Bw==", "post"=>{"post_image"=>#<ActionDispatch::Http::UploadedFile:0x007fbceaf8f5f8 @tempfile=#<Tempfile:/var/folders/vq/2xmr2yjn06jb6g57c61v5vl00000gn/T/RackMultipart20180326-60760-15drr9l.jpg>, @original_filename="red_panda.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"red_panda.jpg\"\r\nContent-Type: image/jpeg\r\n">, "captions"=>"1234"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "post_image_id") VALUES (?, ?, ?, ?)[0m  [["captions", "1234"], ["created_at", "2018-03-26 05:51:30.445845"], ["updated_at", "2018-03-26 05:51:30.445845"], ["post_image_id", 0]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/4
+Completed 302 Found in 14ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2018-03-26 13:51:30 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 42ms (Views: 36.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:51:32 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 72ms (Views: 65.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:51:32 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:51:32 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 5.4ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:51:34 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 38ms (Views: 31.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:51:34 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:51:34 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 12.6ms
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 13:52:18 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (5.5ms)
+  Rendered posts/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 129ms (Views: 102.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:52:18 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:52:18 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 5.6ms
+
+Started POST "/posts" for 127.0.0.1 at 2018-03-26 13:52:24 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jRibUYpDNBgFr0L4vO+aT6fzMkoO/hO131sGjwxVCVBEbtpI3+/0pKgfDl10Rg7e4BsClktB1RtQnInFqxaUfg==", "post"=>{"post_image"=>#<ActionDispatch::Http::UploadedFile:0x007fbce6d29268 @tempfile=#<Tempfile:/var/folders/vq/2xmr2yjn06jb6g57c61v5vl00000gn/T/RackMultipart20180326-60760-b6a4ej.png>, @original_filename="hello_kitty.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"hello_kitty.png\"\r\nContent-Type: image/png\r\n">, "captions"=>"hello"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "post_image_id") VALUES (?, ?, ?, ?)[0m  [["captions", "hello"], ["created_at", "2018-03-26 05:52:24.325924"], ["updated_at", "2018-03-26 05:52:24.325924"], ["post_image_id", 31]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 15ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2018-03-26 13:52:24 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 48ms (Views: 41.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:52:25 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 92ms (Views: 76.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:52:26 +0800
+Refile::App: Could not find attachment by id: 0
+Started GET "/attachments/97d9d35a414d39c5ff98380278ed57b3aee432f5/store/fill/300/300/31/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:52:26 +0800
+Refile::App: Could not find attachment by id: 31
+Refile::App: [2018-03-26 13:52:26 +0800] GET "/97d9d35a414d39c5ff98380278ed57b3aee432f5/store/fill/300/300/31/post_image.jpg" 404 1.4ms
+
+Refile::App: [2018-03-26 13:52:26 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 6.5ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:52:28 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 41ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:52:28 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 13:52:28 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 9.2ms
+
+Started GET "/attachments/97d9d35a414d39c5ff98380278ed57b3aee432f5/store/fill/300/300/31/post_image.jpg" for 127.0.0.1 at 2018-03-26 13:52:28 +0800
+Refile::App: Could not find attachment by id: 31
+Refile::App: [2018-03-26 13:52:28 +0800] GET "/97d9d35a414d39c5ff98380278ed57b3aee432f5/store/fill/300/300/31/post_image.jpg" 404 1.4ms
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (23.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20180321030335)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "captions" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180321030335"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMembers (20180321032824)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "username" varchar, "email" varchar, "mobile_phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180321032824"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddMemberIdToPost (20180323061745)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "posts" ADD "member_id" integer[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180323061745"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPrivateToPosts (20180323062248)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "posts" ADD "private" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180323062248"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPostImageToPosts (20180323094043)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_id" integer[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180323094043"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-03-26 05:53:44.889972"], ["updated_at", "2018-03-26 05:53:44.889972"]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 13:53:59 +0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 446ms (Views: 404.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 13:54:04 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (57.0ms)
+  Rendered posts/new.html.erb within layouts/application (62.9ms)
+Completed 200 OK in 139ms (Views: 94.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 14:08:44 +0800
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (70.4ms)
+  Rendered posts/new.html.erb within layouts/application (81.0ms)
+Completed 200 OK in 522ms (Views: 476.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-03-26 14:08:53 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wASD4SAiYyPHjqerRhmNW9v5Z8/5e2uzeAZFuxH938IUTwx9YAkVTSNhyssYmLHJsHJAvuS6yssHDioa+t80Ig==", "post"=>{"post_image"=>#<ActionDispatch::Http::UploadedFile:0x007fd364c8a9a8 @tempfile=#<Tempfile:/var/folders/vq/2xmr2yjn06jb6g57c61v5vl00000gn/T/RackMultipart20180326-61818-1j4gtof.png>, @original_filename="hello_kitty.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"hello_kitty.png\"\r\nContent-Type: image/png\r\n">, "captions"=>"kitty"}, "commit"=>"Create Post"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "post_image_id") VALUES (?, ?, ?, ?)[0m  [["captions", "kitty"], ["created_at", "2018-03-26 06:08:53.037963"], ["updated_at", "2018-03-26 06:08:53.037963"], ["post_image_id", 0]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 13ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2018-03-26 14:08:53 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 44ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 14:08:54 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 64ms (Views: 58.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 14:08:54 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 14:08:54 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 6.3ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 14:08:56 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 32ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 14:08:56 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 14:08:56 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 1.6ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 14:22:54 +0800
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 514ms (Views: 465.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 14:22:55 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 14:22:55 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 22.8ms
+
+  [1m[36mPost Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-03-26 14:26:18 +0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 270ms (Views: 246.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/attachments/3634059ee155cbddbab5bff7c5b5beb22dee044f/store/fill/300/300/0/post_image" for 127.0.0.1 at 2018-03-26 14:26:18 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 14:26:18 +0800] GET "/3634059ee155cbddbab5bff7c5b5beb22dee044f/store/fill/300/300/0/post_image" 404 3.3ms
+
+  [1m[36mPost Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20180321030335)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "captions" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180321030335"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMembers (20180321032824)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "username" varchar, "email" varchar, "mobile_phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180321032824"]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddMemberIdToPost (20180323061745)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "posts" ADD "member_id" integer[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180323061745"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPrivateToPosts (20180323062248)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "posts" ADD "private" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180323062248"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPostImageToPosts (20180323094043)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180323094043"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-03-26 06:28:39.634232"], ["updated_at", "2018-03-26 06:28:39.634232"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 14:28:59 +0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (70.1ms)
+  Rendered posts/new.html.erb within layouts/application (74.4ms)
+Completed 200 OK in 349ms (Views: 314.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-03-26 14:29:14 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1euveEXUakgVsKuWv0B8g9D5CnQzq1OR2HAtU7eYCrozh5Watx00f0hKWt2Fmqwp9+94SiefvZUYslSr9ulVlw==", "post"=>{"post_image"=>#<ActionDispatch::Http::UploadedFile:0x007f8c8b268da0 @tempfile=#<Tempfile:/var/folders/vq/2xmr2yjn06jb6g57c61v5vl00000gn/T/RackMultipart20180326-62928-1me10vx.jpg>, @original_filename="red_panda.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"red_panda.jpg\"\r\nContent-Type: image/jpeg\r\n">, "captions"=>"aaa"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "post_image_id") VALUES (?, ?, ?, ?)[0m  [["captions", "aaa"], ["created_at", "2018-03-26 06:29:14.778405"], ["updated_at", "2018-03-26 06:29:14.778405"], ["post_image_id", 6]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 18ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2018-03-26 14:29:14 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 55ms (Views: 39.1ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mPost Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/" for 127.0.0.1 at 2018-03-26 14:30:40 +0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 497ms (Views: 452.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/attachments/01662d448cdf49d9c620b01205e4f71df85e53a7/store/fill/300/300/6/post_image" for 127.0.0.1 at 2018-03-26 14:30:42 +0800
+Refile::App: Could not find attachment by id: 6
+Refile::App: [2018-03-26 14:30:42 +0800] GET "/01662d448cdf49d9c620b01205e4f71df85e53a7/store/fill/300/300/6/post_image" 404 3.2ms
+
+Started GET "/posts/1" for 127.0.0.1 at 2018-03-26 14:33:30 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 78ms (Views: 65.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/01662d448cdf49d9c620b01205e4f71df85e53a7/store/fill/300/300/6/post_image" for 127.0.0.1 at 2018-03-26 14:33:30 +0800
+Refile::App: Could not find attachment by id: 6
+Refile::App: [2018-03-26 14:33:30 +0800] GET "/01662d448cdf49d9c620b01205e4f71df85e53a7/store/fill/300/300/6/post_image" 404 1.7ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 14:33:31 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 39ms (Views: 31.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/01662d448cdf49d9c620b01205e4f71df85e53a7/store/fill/300/300/6/post_image" for 127.0.0.1 at 2018-03-26 14:33:31 +0800
+Refile::App: Could not find attachment by id: 6
+Refile::App: [2018-03-26 14:33:31 +0800] GET "/01662d448cdf49d9c620b01205e4f71df85e53a7/store/fill/300/300/6/post_image" 404 1.9ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 14:35:40 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 121ms (Views: 107.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/attachments/01662d448cdf49d9c620b01205e4f71df85e53a7/store/fill/300/300/6/post_image" for 127.0.0.1 at 2018-03-26 14:35:40 +0800
+Refile::App: Could not find attachment by id: 6
+Refile::App: [2018-03-26 14:35:40 +0800] GET "/01662d448cdf49d9c620b01205e4f71df85e53a7/store/fill/300/300/6/post_image" 404 12.5ms
+
+Started GET "/attachments/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" for 127.0.0.1 at 2018-03-26 14:40:00 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 14:40:00 +0800] GET "/e324c40cda978ba768bb7bb892e9e52558fc19ec/store/fill/300/300/0/post_image.jpg" 404 5.8ms
+
+  [1m[36mPost Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/attachments/store/fill/300/300/0/post_image/e324c40cda978ba768bb7bb892e9e52558fc19ec" for 127.0.0.1 at 2018-03-26 14:48:30 +0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Refile::App: [2018-03-26 14:48:31 +0800] GET "/store/fill/300/300/0/post_image/e324c40cda978ba768bb7bb892e9e52558fc19ec" 403 6.5ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 14:48:45 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 439ms (Views: 413.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/attachments/01662d448cdf49d9c620b01205e4f71df85e53a7/store/fill/300/300/6/post_image" for 127.0.0.1 at 2018-03-26 14:48:45 +0800
+Refile::App: Could not find attachment by id: 6
+Refile::App: [2018-03-26 14:48:45 +0800] GET "/01662d448cdf49d9c620b01205e4f71df85e53a7/store/fill/300/300/6/post_image" 404 3.1ms
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20180321030335)
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "captions" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180321030335"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMembers (20180321032824)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "username" varchar, "email" varchar, "mobile_phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180321032824"]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddMemberIdToPost (20180323061745)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "posts" ADD "member_id" integer[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180323061745"]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPrivateToPosts (20180323062248)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "posts" ADD "private" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180323062248"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPostImageToPosts (20180326065331)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_content_size" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_content_type" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180326065331"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-03-26 06:53:40.057553"], ["updated_at", "2018-03-26 06:53:40.057553"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 14:55:06 +0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.5) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.5) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPostImageToPosts (20180326065437)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_id" integer[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_content_size" varchar[0m
+  [1m[35m (2.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20180321030335)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "captions" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180321030335"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMembers (20180321032824)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "username" varchar, "email" varchar, "mobile_phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180321032824"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddMemberIdToPost (20180323061745)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "posts" ADD "member_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180323061745"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPrivateToPosts (20180323062248)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "posts" ADD "private" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180323062248"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPostImageToPosts (20180326065437)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_id" integer[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_content_size" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_content_type" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180326065437"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-03-26 06:55:51.767149"], ["updated_at", "2018-03-26 06:55:51.767149"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "members" ("first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Barbara"], ["last_name", "McKinney"], ["username", "barbaramckinney"], ["email", "barbara.mckinney@example.com"], ["created_at", "2018-03-26 06:56:00.958699"], ["updated_at", "2018-03-26 06:56:00.958699"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "members" ("first_name", "last_name", "username", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Lorraine"], ["last_name", "Bowman"], ["username", "lorrainebowman"], ["email", "lorraine.bowman@example.com"], ["created_at", "2018-03-26 06:56:00.964697"], ["updated_at", "2018-03-26 06:56:00.964697"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "member_id") VALUES (?, ?, ?, ?)[0m  [["captions", "Lorem"], ["created_at", "2018-03-26 06:56:01.043341"], ["updated_at", "2018-03-26 06:56:01.043341"], ["member_id", 1]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "member_id") VALUES (?, ?, ?, ?)[0m  [["captions", "Ipsum"], ["created_at", "2018-03-26 06:56:01.050298"], ["updated_at", "2018-03-26 06:56:01.050298"], ["member_id", 1]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "member_id") VALUES (?, ?, ?, ?)[0m  [["captions", "Dimsum"], ["created_at", "2018-03-26 06:56:01.056000"], ["updated_at", "2018-03-26 06:56:01.056000"], ["member_id", 1]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "member_id") VALUES (?, ?, ?, ?)[0m  [["captions", "Lipsum"], ["created_at", "2018-03-26 06:56:01.061361"], ["updated_at", "2018-03-26 06:56:01.061361"], ["member_id", 1]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" ORDER BY "members"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "member_id") VALUES (?, ?, ?, ?)[0m  [["captions", "Water"], ["created_at", "2018-03-26 06:56:01.067544"], ["updated_at", "2018-03-26 06:56:01.067544"], ["member_id", 2]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "member_id") VALUES (?, ?, ?, ?)[0m  [["captions", "Tea"], ["created_at", "2018-03-26 06:56:01.078926"], ["updated_at", "2018-03-26 06:56:01.078926"], ["member_id", 2]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "member_id") VALUES (?, ?, ?, ?)[0m  [["captions", "Coffee"], ["created_at", "2018-03-26 06:56:01.084285"], ["updated_at", "2018-03-26 06:56:01.084285"], ["member_id", 2]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "member_id") VALUES (?, ?, ?, ?)[0m  [["captions", "Chocolate"], ["created_at", "2018-03-26 06:56:01.089533"], ["updated_at", "2018-03-26 06:56:01.089533"], ["member_id", 2]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 14:56:12 +0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (32.0ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    13:   <tbody>
+    14:     <% @posts.each do |post| %>
+    15:       <tr>
+    16:         <td><%= image_tag attachment_url(post, :post_image, :fill, 300, 300) %></td>
+    17:         <td><%= post.captions %></td>
+    18:         <td><%= link_to 'Show', post %></td>
+    19:         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+  
+app/views/posts/index.html.erb:16:in `block in _app_views_posts_index_html_erb__3612084729681689339_70207625604280'
+app/views/posts/index.html.erb:14:in `_app_views_posts_index_html_erb__3612084729681689339_70207625604280'
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 14:57:36 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    13:   <tbody>
+    14:     <% @posts.each do |post| %>
+    15:       <tr>
+    16:         <td><%= image_tag attachment_url(post, :post_image, :fill, 300, 300) %></td>
+    17:         <td><%= post.captions %></td>
+    18:         <td><%= link_to 'Show', post %></td>
+    19:         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+  
+app/views/posts/index.html.erb:16:in `block in _app_views_posts_index_html_erb__3612084729681689339_70207658526380'
+app/views/posts/index.html.erb:14:in `_app_views_posts_index_html_erb__3612084729681689339_70207658526380'
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 14:57:41 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (34.9ms)
+  Rendered posts/new.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 473ms (Views: 468.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 14:57:58 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (5.2ms)
+  Rendered posts/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 60ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-03-26 14:58:05 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xva6KiByjeWanAe/LvaVPD/KZbbnXkSo21mWX2SIhg4SvTW2YFn7i35zat9wd6muVEFCx/qf5dCkUfn+j6pt7g==", "post"=>{"post_image"=>#<ActionDispatch::Http::UploadedFile:0x007fb4fdf33c48 @tempfile=#<Tempfile:/var/folders/vq/2xmr2yjn06jb6g57c61v5vl00000gn/T/RackMultipart20180326-63136-aoenuz.jpg>, @original_filename="red_panda.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"red_panda.jpg\"\r\nContent-Type: image/jpeg\r\n">, "captions"=>"pandaaa"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "post_image_id", "post_image_content_type") VALUES (?, ?, ?, ?, ?)[0m  [["captions", "pandaaa"], ["created_at", "2018-03-26 06:58:05.228837"], ["updated_at", "2018-03-26 06:58:05.228837"], ["post_image_id", 718], ["post_image_content_type", "image/jpeg"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/9
+Completed 302 Found in 11ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/posts/9" for 127.0.0.1 at 2018-03-26 14:58:05 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 14:58:06 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (12.9ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    13:   <tbody>
+    14:     <% @posts.each do |post| %>
+    15:       <tr>
+    16:         <td><%= image_tag attachment_url(post, :post_image, :fill, 300, 300) %></td>
+    17:         <td><%= post.captions %></td>
+    18:         <td><%= link_to 'Show', post %></td>
+    19:         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+  
+app/views/posts/index.html.erb:16:in `block in _app_views_posts_index_html_erb__3612084729681689339_70207666098120'
+app/views/posts/index.html.erb:14:in `_app_views_posts_index_html_erb__3612084729681689339_70207666098120'
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 14:58:09 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    13:   <tbody>
+    14:     <% @posts.each do |post| %>
+    15:       <tr>
+    16:         <td><%= image_tag attachment_url(post, :post_image, :fill, 300, 300) %></td>
+    17:         <td><%= post.captions %></td>
+    18:         <td><%= link_to 'Show', post %></td>
+    19:         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+  
+app/views/posts/index.html.erb:16:in `block in _app_views_posts_index_html_erb__3612084729681689339_70207635245260'
+app/views/posts/index.html.erb:14:in `_app_views_posts_index_html_erb__3612084729681689339_70207635245260'
+  [1m[36mPost Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:01:12 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 66ms (Views: 61.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/attachments/71e15a51555e57c32a87a91e9807521131f06a54/store/fill/300/300/718/post_image.jpeg" for 127.0.0.1 at 2018-03-26 15:01:13 +0800
+Refile::App: Could not find attachment by id: 718
+Refile::App: [2018-03-26 15:01:13 +0800] GET "/71e15a51555e57c32a87a91e9807521131f06a54/store/fill/300/300/718/post_image.jpeg" 404 22.4ms
+
+Started DELETE "/posts/9" for 127.0.0.1 at 2018-03-26 15:01:20 +0800
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xDffCnvz5HrcxxMmi+vxySmkeAkFVfA3NchOyuEMCYkQfFCWO9iSFDgofkbVas1bQi9feBiUUU9KwCFrCi7iaQ==", "id"=>"9"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 9]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 11ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:01:20 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 80ms (Views: 73.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 15:01:23 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.6ms)
+  Rendered posts/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 73ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-03-26 15:01:38 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LVl2yvUWiRuMpM3BWE16c1i+dmG1dMy1yqTBusGLvovkLzfToLpJpyEUgWSQ5O7iH1ZGvfDLChtFY07wZsgjpQ==", "post"=>{"post_image"=>#<ActionDispatch::Http::UploadedFile:0x007fb4fa540838 @tempfile=#<Tempfile:/var/folders/vq/2xmr2yjn06jb6g57c61v5vl00000gn/T/RackMultipart20180326-63136-kipv9f.png>, @original_filename="hello_kitty.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"hello_kitty.png\"\r\nContent-Type: image/png\r\n">, "captions"=>"aaa"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "post_image_id", "post_image_content_type") VALUES (?, ?, ?, ?, ?)[0m  [["captions", "aaa"], ["created_at", "2018-03-26 07:01:38.781461"], ["updated_at", "2018-03-26 07:01:38.781461"], ["post_image_id", 57900], ["post_image_content_type", "image/png"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/10
+Completed 302 Found in 11ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2018-03-26 15:01:38 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 37ms (Views: 30.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:01:41 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 54ms (Views: 49.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/attachments/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" for 127.0.0.1 at 2018-03-26 15:01:41 +0800
+Refile::App: Could not find attachment by id: 57900
+Refile::App: [2018-03-26 15:01:41 +0800] GET "/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" 404 1.4ms
+
+  [1m[36mPost Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "posts" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:04:52 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 31ms (Views: 27.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" for 127.0.0.1 at 2018-03-26 15:04:52 +0800
+Refile::App: Could not find attachment by id: 57900
+Refile::App: [2018-03-26 15:04:52 +0800] GET "/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" 404 1.3ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:06:39 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" for 127.0.0.1 at 2018-03-26 15:06:39 +0800
+Refile::App: Could not find attachment by id: 57900
+Refile::App: [2018-03-26 15:06:39 +0800] GET "/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" 404 1.4ms
+
+Started GET "/posts/10" for 127.0.0.1 at 2018-03-26 15:06:41 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 67ms (Views: 59.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" for 127.0.0.1 at 2018-03-26 15:06:41 +0800
+Refile::App: Could not find attachment by id: 57900
+Refile::App: [2018-03-26 15:06:41 +0800] GET "/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" 404 2.4ms
+
+Started GET "/attachments/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" for 127.0.0.1 at 2018-03-26 15:06:44 +0800
+Refile::App: Could not find attachment by id: 57900
+Refile::App: [2018-03-26 15:06:44 +0800] GET "/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" 404 1.2ms
+
+Started GET "/attachments/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" for 127.0.0.1 at 2018-03-26 15:07:09 +0800
+Refile::App: Could not find attachment by id: 57900
+Refile::App: [2018-03-26 15:07:09 +0800] GET "/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" 404 1.3ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:08:43 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 74ms (Views: 66.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" for 127.0.0.1 at 2018-03-26 15:08:44 +0800
+Refile::App: Could not find attachment by id: 57900
+Refile::App: [2018-03-26 15:08:44 +0800] GET "/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" 404 1.3ms
+
+Started PUT "/__web_console/repl_sessions/5f07b960a8a07e3ca2a241c1419930c3" for 127.0.0.1 at 2018-03-26 15:09:24 +0800
+Started PUT "/__web_console/repl_sessions/5f07b960a8a07e3ca2a241c1419930c3" for 127.0.0.1 at 2018-03-26 15:09:24 +0800
+Started PUT "/__web_console/repl_sessions/5f07b960a8a07e3ca2a241c1419930c3" for 127.0.0.1 at 2018-03-26 15:09:31 +0800
+Started PUT "/__web_console/repl_sessions/5f07b960a8a07e3ca2a241c1419930c3" for 127.0.0.1 at 2018-03-26 15:09:36 +0800
+Started PUT "/__web_console/repl_sessions/5f07b960a8a07e3ca2a241c1419930c3" for 127.0.0.1 at 2018-03-26 15:09:45 +0800
+Started PUT "/__web_console/repl_sessions/5f07b960a8a07e3ca2a241c1419930c3" for 127.0.0.1 at 2018-03-26 15:09:46 +0800
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:11:42 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 74ms (Views: 69.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" for 127.0.0.1 at 2018-03-26 15:11:42 +0800
+Refile::App: Could not find attachment by id: 57900
+Refile::App: [2018-03-26 15:11:42 +0800] GET "/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" 404 1.4ms
+
+Started GET "/posts/10" for 127.0.0.1 at 2018-03-26 15:15:31 +0800
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/attachments/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" for 127.0.0.1 at 2018-03-26 15:15:32 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/attachments/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/posts/10" for 127.0.0.1 at 2018-03-26 15:15:33 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/posts/10"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/posts/10" for 127.0.0.1 at 2018-03-26 15:15:43 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 93ms (Views: 61.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:15:46 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 117ms (Views: 108.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" for 127.0.0.1 at 2018-03-26 15:15:46 +0800
+Refile::App: Could not find attachment by id: 57900
+Refile::App: [2018-03-26 15:15:46 +0800] GET "/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" 404 1.4ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:16:24 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 107ms (Views: 92.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/attachments/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" for 127.0.0.1 at 2018-03-26 15:16:25 +0800
+Refile::App: Could not find attachment by id: 57900
+Refile::App: [2018-03-26 15:16:25 +0800] GET "/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" 404 12.5ms
+
+Started GET "/posts/10" for 127.0.0.1 at 2018-03-26 15:16:27 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 51ms (Views: 41.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" for 127.0.0.1 at 2018-03-26 15:16:27 +0800
+Refile::App: Could not find attachment by id: 57900
+Refile::App: [2018-03-26 15:16:27 +0800] GET "/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" 404 1.8ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:16:28 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/attachments/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" for 127.0.0.1 at 2018-03-26 15:16:29 +0800
+  Rendered posts/index.html.erb within layouts/application (21.7ms)
+Refile::App: Could not find attachment by id: 57900
+Refile::App: [2018-03-26 15:16:29 +0800] GET "/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" 404 7.0ms
+
+Completed 200 OK in 93ms (Views: 78.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/attachments/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" for 127.0.0.1 at 2018-03-26 15:16:29 +0800
+Refile::App: Could not find attachment by id: 57900
+Refile::App: [2018-03-26 15:16:29 +0800] GET "/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" 404 2.6ms
+
+Started GET "/posts/10/edit" for 127.0.0.1 at 2018-03-26 15:16:30 +0800
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (6.4ms)
+  Rendered posts/edit.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 67ms (Views: 58.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" for 127.0.0.1 at 2018-03-26 15:16:30 +0800
+Refile::App: Could not find attachment by id: 57900
+Refile::App: [2018-03-26 15:16:30 +0800] GET "/b9a70e1b7b15e7676c5b3ffc0f0482b7c0757edc/store/fill/300/300/57900/post_image.png" 404 1.5ms
+
+Started PATCH "/posts/10" for 127.0.0.1 at 2018-03-26 15:16:36 +0800
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WvXDppFO2+H8s9aGMNyeyBi6UmZdNB4fYDFT8zNQz5Ba1W63Le4xg5CqS6Dw3xlT7pll0d8TxOyhCHNYT4jMBQ==", "post"=>{"post_image"=>#<ActionDispatch::Http::UploadedFile:0x007fb4fd651238 @tempfile=#<Tempfile:/var/folders/vq/2xmr2yjn06jb6g57c61v5vl00000gn/T/RackMultipart20180326-63136-2aidp6.jpg>, @original_filename="red_panda.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"red_panda.jpg\"\r\nContent-Type: image/jpeg\r\n">, "captions"=>"aaa"}, "commit"=>"Update Post", "id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "posts" SET "post_image_id" = ?, "post_image_content_type" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["post_image_id", 0], ["post_image_content_type", "image/jpeg"], ["updated_at", "2018-03-26 07:16:36.669323"], ["id", 10]]
+  [1m[35m (19.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/10
+Completed 302 Found in 30ms (ActiveRecord: 20.1ms)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2018-03-26 15:16:36 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:16:38 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 78ms (Views: 74.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/attachments/28dec6db75ae9002feef6626d2b8d9fa1a3accda/store/fill/300/300/0/post_image.jpeg" for 127.0.0.1 at 2018-03-26 15:16:38 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 15:16:38 +0800] GET "/28dec6db75ae9002feef6626d2b8d9fa1a3accda/store/fill/300/300/0/post_image.jpeg" 404 1.6ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:16:40 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 40ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/28dec6db75ae9002feef6626d2b8d9fa1a3accda/store/fill/300/300/0/post_image.jpeg" for 127.0.0.1 at 2018-03-26 15:16:40 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 15:16:40 +0800] GET "/28dec6db75ae9002feef6626d2b8d9fa1a3accda/store/fill/300/300/0/post_image.jpeg" 404 1.5ms
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20180321030335)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "captions" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180321030335"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMembers (20180321032824)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "username" varchar, "email" varchar, "mobile_phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180321032824"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddMemberIdToPost (20180323061745)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "posts" ADD "member_id" integer[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180323061745"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPrivateToPosts (20180323062248)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "posts" ADD "private" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180323062248"]]
+  [1m[35m (20.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPostImageToPosts (20180326065437)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_id" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_content_size" varchar[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_content_type" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180326065437"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-03-26 07:20:55.460300"], ["updated_at", "2018-03-26 07:20:55.460300"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 15:21:24 +0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (69.0ms)
+  Rendered posts/new.html.erb within layouts/application (84.5ms)
+Completed 200 OK in 619ms (Views: 565.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/attachments/28dec6db75ae9002feef6626d2b8d9fa1a3accda/store/fill/300/300/0/post_image.jpeg" for 127.0.0.1 at 2018-03-26 15:21:25 +0800
+Refile::App: Could not find attachment by id: 0
+Refile::App: [2018-03-26 15:21:25 +0800] GET "/28dec6db75ae9002feef6626d2b8d9fa1a3accda/store/fill/300/300/0/post_image.jpeg" 404 14.1ms
+
+Started POST "/posts" for 127.0.0.1 at 2018-03-26 15:21:31 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KxQw1C4CvybAb8W5i9Evqg11dsY73aMd9w4CcNgMFzniYnHNe65/mm3fiRxDeLs7Sp1GGn5iZbN4yY06f0+KFw==", "post"=>{"post_image"=>#<ActionDispatch::Http::UploadedFile:0x007fb9c311c298 @tempfile=#<Tempfile:/var/folders/vq/2xmr2yjn06jb6g57c61v5vl00000gn/T/RackMultipart20180326-64136-1an7w8l.jpg>, @original_filename="red_panda.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"red_panda.jpg\"\r\nContent-Type: image/jpeg\r\n">, "captions"=>"panda"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "post_image_id", "post_image_content_type") VALUES (?, ?, ?, ?, ?)[0m  [["captions", "panda"], ["created_at", "2018-03-26 07:21:31.800294"], ["updated_at", "2018-03-26 07:21:31.800294"], ["post_image_id", "4119d46ba6b6e28bd72c3c677bb034c5e3ddf45b7bdc51dca2a6a16e0672"], ["post_image_content_type", "image/jpeg"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 12ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2018-03-26 15:21:31 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 45ms (Views: 28.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:21:33 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 68ms (Views: 57.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/35ea7ab8bfc37e2e86f82c2cb70833414c3e564b/store/fill/300/300/4119d46ba6b6e28bd72c3c677bb034c5e3ddf45b7bdc51dca2a6a16e0672/post_image.jpeg" for 127.0.0.1 at 2018-03-26 15:21:33 +0800
+Refile::App: [2018-03-26 15:21:33 +0800] GET "/35ea7ab8bfc37e2e86f82c2cb70833414c3e564b/store/fill/300/300/4119d46ba6b6e28bd72c3c677bb034c5e3ddf45b7bdc51dca2a6a16e0672/post_image.jpeg" 200 190.0ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:21:39 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 69ms (Views: 64.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-03-26 15:22:50 +0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (12.2ms)
+  Rendered posts/new.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 78ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-03-26 15:22:57 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CL6JeF83kO9QAXuFwa7zTmHXZds5+1lBXNXOydii7IfByMhhCptQU/2xNyAJB2ffJj9VB3xEn+/TEkGDf+FxqQ==", "post"=>{"post_image"=>#<ActionDispatch::Http::UploadedFile:0x007fb9c60eadd0 @tempfile=#<Tempfile:/var/folders/vq/2xmr2yjn06jb6g57c61v5vl00000gn/T/RackMultipart20180326-64136-1j4qv9e.png>, @original_filename="hello_kitty.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[post_image]\"; filename=\"hello_kitty.png\"\r\nContent-Type: image/png\r\n">, "captions"=>"kitty"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("captions", "created_at", "updated_at", "post_image_id", "post_image_content_type") VALUES (?, ?, ?, ?, ?)[0m  [["captions", "kitty"], ["created_at", "2018-03-26 07:22:58.000858"], ["updated_at", "2018-03-26 07:22:58.000858"], ["post_image_id", "eeb77c7478c1e54c985ffe1078d1ae6238b38f453b9ed02ced59f17dea74"], ["post_image_content_type", "image/png"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 13ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2018-03-26 15:22:58 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 40ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:22:59 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 78ms (Views: 71.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/4e569c0eb722533de3308205ef1448c83afbe54c/store/fill/300/300/eeb77c7478c1e54c985ffe1078d1ae6238b38f453b9ed02ced59f17dea74/post_image.png" for 127.0.0.1 at 2018-03-26 15:22:59 +0800
+Refile::App: [2018-03-26 15:23:00 +0800] GET "/4e569c0eb722533de3308205ef1448c83afbe54c/store/fill/300/300/eeb77c7478c1e54c985ffe1078d1ae6238b38f453b9ed02ced59f17dea74/post_image.png" 200 175.3ms
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:36:33 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (46.1ms)
+Completed 200 OK in 243ms (Views: 217.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-03-26 15:36:51 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 91ms (Views: 85.3ms | ActiveRecord: 0.4ms)
+
+
