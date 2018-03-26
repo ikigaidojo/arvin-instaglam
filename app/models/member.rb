@@ -7,4 +7,6 @@ class Member < ApplicationRecord
 
   has_many :posts
 
+  attachment :avatar #profile_picture
+
 end
